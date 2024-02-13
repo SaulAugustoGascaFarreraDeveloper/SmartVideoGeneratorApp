@@ -7,7 +7,6 @@ import {zodResolver} from "@hookform/resolvers/zod"
 import { ChatFormSchema, ScrapeFormSchema } from '@/lib/schemas'
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { string } from 'zod'
 import { cn } from '@/lib/utils'
 
 
@@ -17,7 +16,7 @@ interface Message{
 }
 
 
-const ChatPage = ({role,content} : Message) => {
+const ChatPage = () => {
 
   const [urlResponse,setUrlResponse] = useState<string>("")
   const [messages,setMessages] = useState<Message[]>([])
